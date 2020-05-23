@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="monitor">
+    <view>
+      <text class="icon icon-light"></text>
+      <text>光照：{{light}}</text>
+    </view>
+
+    <view>
+      <text class="icon icon-temperature"></text>
+      <text wx:if="{{temperature === undefined}}" decode="{{true}}">温度：&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <text wx:else>温度：{{temperature}}</text>
+    </view>
+
+    <view>
+      <text class="icon icon-humidity"></text>
+      <text>湿度：{{humidity}}</text>
+    </view>
+    
+  </view>
+</view>

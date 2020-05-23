@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="section">  
+    <picker mode="date" value="" start="2010-01-01" end="2020-01-01" bindchange="bindDateChange">  
+      <view class="picker">  选择日期： {{date}}  </view>  
+    </picker>  
+  </view>  
+
+  <view class="section">  
+    <picker mode="time" value="" start="00:00" end="23:59" bindchange="bindTimeChange">  
+      <view class="picker">  选择时间： {{time}}  </view>  
+    </picker>  
+  </view> 
+
+  <button class="button" bindtap='findMongo'>
+    <text class="icon icon-find"></text>查找
+  </button> 
+
+  <mp-dialog title="查询结果" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{button}}">
+    <view wx:if="{{results === null}}">没有找到结果</view>
+    <view wx:else>
+      <view wx:for="{{results}}" wx:for-index="key"  wx:for-item="value">{{key}} : {{value}}</view>
+    </view>
+  </mp-dialog>
+</view>

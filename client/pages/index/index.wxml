@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <view class="title">
+      <text>欢迎使用本产品！</text>
+      <text>请选择您所需要的服务：</text>
+    </view>
+    <view class="menu">
+      <view class="btn" bindtap="toMonitor">
+        <text class="icon icon-monitor"></text>
+        <text class="menuText">实时监控</text>
+      </view>
+      <view class="btn" bindtap="toFind">
+        <text class="icon icon-history"></text>
+        <text class="menuText">历史数据</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,16 @@
+{
+    "mapping": {
+        "button/vcc": "ruff-mbd-v1/vdd-0",
+        "button/gpio": "ruff-mbd-v1/gpio-11",
+        "KY-016/pwm-r": null,
+        "KY-016/pwm-g": null,
+        "KY-016/pwm-b": null,
+        "GY-30/vcc": "ruff-mbd-v1/vdd-5",
+        "GY-30/i2c": "ruff-mbd-v1/i2c-0",
+        "button/gnd": "ruff-mbd-v1/gnd-2",
+        "KY-016/gnd": null,
+        "GY-30/gnd": "ruff-mbd-v1/gnd-9",
+        "dht11/gnd": "ruff-mbd-v1/gnd-10",
+        "dht11/vcc": "ruff-mbd-v1/vdd-7"
+    }
+}

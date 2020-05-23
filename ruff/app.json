@@ -1,0 +1,80 @@
+{
+    "devices": [
+        {
+            "id": "button",
+            "model": "CK002",
+            "driver": "button-gpio",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    },
+                    "features": {
+                        "input": [
+                            "read",
+                            "interrupt"
+                        ]
+                    }
+                }
+            },
+            "featureVersion": "0.1"
+        },
+        {
+            "id": "KY-016",
+            "model": "KY-016",
+            "driver": "ky-016",
+            "inputs": {
+                "gnd": {
+                    "type": "ground"
+                },
+                "pwm-r": {
+                    "type": "pwm",
+                    "args": {
+                        "frequency": 800
+                    }
+                },
+                "pwm-g": {
+                    "type": "pwm",
+                    "args": {
+                        "frequency": 800
+                    }
+                },
+                "pwm-b": {
+                    "type": "pwm",
+                    "args": {
+                        "frequency": 800
+                    }
+                }
+            }
+        },
+        {
+            "id": "GY-30",
+            "model": "GY-30",
+            "driver": "gy-30",
+            "args": {
+                "highResolution": true
+            },
+            "inputs": {
+                "i2c": {
+                    "type": "i2c",
+                    "args": {
+                        "address": 35
+                    }
+                }
+            }
+        },
+        {
+            "id": "dht11",
+            "model": "DHT11",
+            "driver": "dht11",
+            "inputs": {
+                "gpio": {
+                    "type": "gpio",
+                    "reserve": "gpio-18/gpio"
+                }
+            }
+        }
+    ]
+}

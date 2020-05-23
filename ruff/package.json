@@ -1,0 +1,29 @@
+{
+    "name": "led",
+    "version": "0.1.0",
+    "description": "led",
+    "author": "Nanchao Inc.",
+    "main": "src/index.js",
+    "ruff": {
+        "dependencies": {
+            "button-gpio": "^2.0.9",
+            "ky-016": "^2.0.5",
+            "gy-30": "^3.0.6",
+            "dht11": "^0.3.6",
+            "mqtt": "^0.1.3"
+        },
+        "transformation": {
+            "src/*.js": [
+                [
+                    "node_modules/.bin/babel",
+                    "--presets=es2015"
+                ]
+            ]
+        },
+        "version": 1
+    },
+    "dependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1"
+    }
+}
